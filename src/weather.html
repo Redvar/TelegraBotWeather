@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather</title>
+</head>
+<body>
+<table>
+  <tr>
+    <th>City</th>
+    <th>Temperature</th>
+    <th>Description</th>
+  </tr>
+  <tr th:each="weather : ${weatherList}">
+    <td th:text="${weather.city}"></td>
+    <td th:text="${weather.temperature}"></td>
+    <td th:text="${weather.description}"></td>
+  </tr>
+</table>
+</body>
+</html>

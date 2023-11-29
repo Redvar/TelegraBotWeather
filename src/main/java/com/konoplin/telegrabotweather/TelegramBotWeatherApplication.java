@@ -13,6 +13,10 @@ public class TelegramBotWeatherApplication implements Runnable {
     public static void main(String[] args) {
         new TelegramBotWeatherApplication().run();
         SpringApplication.run(TelegramBotWeatherApplication.class, args);
+    }
+
+    @Override
+    public void run() {
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -27,10 +31,6 @@ public class TelegramBotWeatherApplication implements Runnable {
                 System.out.println("Moscow = " + MoscowValue);
             }
         }, 0,5000);
-    }
-
-    @Override
-    public void run() {
 
     }
 }

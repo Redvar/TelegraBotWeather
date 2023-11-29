@@ -1,5 +1,9 @@
 package com.konoplin.telegrabotweather.repository;
 
-public interface WeatherDTO {
-    String getLocation();
+interface WeatherDTO {
+    String getCity();
+
+    double getTemperature();
+
+    String getDescription();
 }
