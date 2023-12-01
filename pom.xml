@@ -11,8 +11,8 @@
     <groupId>com.konoplin</groupId>
     <artifactId>TelegraBotWeather</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>TelegraBotWeather</name>
-    <description>TelegraBotWeather</description>
+    <name>TelegramBotWeather</name>
+    <description>TelegramBotWeather</description>
     <properties>
         <java.version>17</java.version>
     </properties>
@@ -34,6 +34,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>6.1.1</version>
         </dependency>
     </dependencies>
 

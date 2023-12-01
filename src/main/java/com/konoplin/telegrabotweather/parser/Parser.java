@@ -1,5 +1,6 @@
 package com.konoplin.telegrabotweather.parser;
 
+import jakarta.annotation.Nullable;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -10,6 +11,7 @@ import java.io.IOException;
 public class Parser {
     Document doc;
 
+    @Nullable
     public String elementParserByURL(String targetPageURL, String targetByCSSSelector) {
         try {
             doc = Jsoup.connect(targetPageURL).get();

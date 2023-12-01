@@ -1,9 +1,12 @@
 package com.konoplin.telegrabotweather;
 
+import com.konoplin.telegrabotweather.model.Weather;
 import com.konoplin.telegrabotweather.parser.Parser;
+import com.konoplin.telegrabotweather.service.WeatherService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.sql.SQLOutput;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -21,14 +24,10 @@ public class TelegramBotWeatherApplication implements Runnable {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                Parser parser = new Parser();
-                String MoscowValue = parser.elementParserByURL("https://www.gismeteo.ru/weather-moscow-4368/",
-                        "body > section.content.wrap > div.content-column.column1 > section.section.section-content.section-bottom-collapse > div > a:nth-child(1) > div > div.tab-content > div.weather > div.weather-value > span.unit.unit_temperature_c");
-                String BronitsyValue = parser.elementParserByURL("https://www.gismeteo.ru/weather-bronnitsy-11392/",
-                        "body > section.content.wrap > div.content-column.column1 > section.section.section-content.section-bottom-collapse > div > a:nth-child(1) > div > div.tab-content > div.weather > div.weather-value > span.unit.unit_temperature_c");
+                WeatherService weatherService = new WeatherService();
+                Weather weather = weatherService.getCurrentWeatherData("Moscow");
+                System.out.println(weather.getCity() + " " + weather.getTemperature() + " " + weather.getDescription());
 
-                System.out.println("Bronitsy = " + BronitsyValue);
-                System.out.println("Moscow = " + MoscowValue);
             }
         }, 0,5000);
 

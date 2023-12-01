@@ -1,6 +1,6 @@
 package com.konoplin.telegrabotweather.model;
 
-public class Weather {
+public class Weather{
     private String city;
     private double temperature;
     private String description;
