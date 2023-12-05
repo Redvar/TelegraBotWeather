@@ -7,7 +7,7 @@
     border: 1px black;
     background: cornflowerblue;
   }
-</style> /style>
+</style>
 </head>
 <body>
 <table>
@@ -16,7 +16,7 @@
     <th>Temperature</th>
     <th>Description</th>
   </tr>
-  <tr th:each="weather : ${weatherList}">
+  <tr th:each="weather : ${weather}">
     <td th:text="${weather.city}"></td>
     <td th:text="${weather.temperature}"></td>
     <td th:text="${weather.description}"></td>

@@ -1,4 +1,4 @@
-package com.konoplin.telegrabotweather.parser;
+package com.konoplin.telegrambotweather.parser;
 
 import jakarta.annotation.Nullable;
 import org.jsoup.Jsoup;

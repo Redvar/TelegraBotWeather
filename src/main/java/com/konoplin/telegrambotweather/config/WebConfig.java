@@ -1,4 +1,4 @@
-package com.konoplin.telegrabotweather.config;
+package com.konoplin.telegrambotweather.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
