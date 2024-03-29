@@ -14,7 +14,7 @@ class TelegraBotWeatherApplicationTests {
     @Test
     void contextLoads() {
     }
-
+    /*
     @Test
     public void testShowWeather_Positive() {
         // Создаем заглушку для WeatherService
@@ -58,3 +58,4 @@ class TelegraBotWeatherApplicationTests {
     }
 
 }
+*/

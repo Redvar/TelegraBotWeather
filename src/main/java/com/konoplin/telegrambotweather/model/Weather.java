@@ -1,11 +1,14 @@
 package com.konoplin.telegrambotweather.model;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 public class Weather implements Serializable {
     private String city;
     private String temperature;
     private String description;
+
+
 
     @Override
     public String toString() {
