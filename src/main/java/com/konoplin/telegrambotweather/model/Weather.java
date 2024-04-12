@@ -1,29 +1,23 @@
 package com.konoplin.telegrambotweather.model;
 
-import java.io.Serializable;
-import java.time.LocalDateTime;
+import javax.xml.crypto.Data;
+import java.util.Date;
 
-public class Weather implements Serializable {
+public class Weather {
     private String city;
+    private Date time;
     private String temperature;
-    private String description;
+    private double lon;
+    private double lat;
 
-
-
-    @Override
-    public String toString() {
-        return "Weather{" +
-                "city='" + city + '\'' +
-                ", temperature=" + temperature +
-                ", description='" + description + '\'' +
-                '}';
-    }
-
-    public Weather(String city, String temperature, String description){
+    public Weather(String city, Date time, String temperature, double lon, double lat) {
         this.city = city;
+        this.time = time;
         this.temperature = temperature;
-        this.description = description;
+        this.lon = lon;
+        this.lat = lat;
     }
+
 
     public String getCity() {
         return city;
@@ -31,6 +25,14 @@ public class Weather implements Serializable {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public Date getTime() {
+        return time;
+    }
+
+    public void setTime(Date time) {
+        this.time = time;
     }
 
     public String getTemperature() {
@@ -41,11 +43,19 @@ public class Weather implements Serializable {
         this.temperature = temperature;
     }
 
-    public String getDescription() {
-        return description;
+    public double getLon() {
+        return lon;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setLon(double lon) {
+        this.lon = lon;
+    }
+
+    public double getLat() {
+        return lat;
+    }
+
+    public void setLat(double lat) {
+        this.lat = lat;
     }
 }
